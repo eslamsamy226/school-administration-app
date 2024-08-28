@@ -1,8 +1,9 @@
-package com.example.school_administration_app.Controllers;
+package com.eslam.school_administration_app.Controller;
 
-import com.example.school_administration_app.Entities.Course;
-import com.example.school_administration_app.Entities.Student;
-import com.example.school_administration_app.Services.StudentService;
+import com.eslam.school_administration_app.Entity.Course;
+import com.eslam.school_administration_app.Entity.Student;
+import com.eslam.school_administration_app.services.JwtService;
+import com.eslam.school_administration_app.services.StudentService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -11,6 +12,7 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
 
+import java.net.http.HttpHeaders;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +24,7 @@ public class StudentController {
 
     @Autowired
     private StudentService studentService;
-
+    private JwtService jwtService;
     @GetMapping
     public List<Student> getAllStudents() {
         return studentService.findAllStudents();

@@ -1,4 +1,4 @@
-package com.example.school_administration_app;
+package com.eslam.school_administration_app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SchoolAdministrationAppApplication {
 
 	public static void main(String[] args) {
-		System.out.println("Hello World");
+
 		SpringApplication.run(SchoolAdministrationAppApplication.class, args);
 	}
 

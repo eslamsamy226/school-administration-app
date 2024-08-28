@@ -1,9 +1,9 @@
-package com.example.school_administration_app.Services;
+package com.eslam.school_administration_app.services;
 
-import com.example.school_administration_app.Entities.Course;
-import com.example.school_administration_app.Entities.Student;
-import com.example.school_administration_app.Repositories.CourseRepository;
-import com.example.school_administration_app.Repositories.StudentRepository;
+import com.eslam.school_administration_app.Entity.Course;
+import com.eslam.school_administration_app.Entity.Student;
+import com.eslam.school_administration_app.Repository.CourseRepository;
+import com.eslam.school_administration_app.Repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
 import org.springframework.stereotype.Service;

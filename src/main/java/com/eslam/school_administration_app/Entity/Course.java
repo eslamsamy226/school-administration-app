@@ -1,9 +1,8 @@
-package com.example.school_administration_app.Entities;
+package com.eslam.school_administration_app.Entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;

@@ -1,5 +1,4 @@
-package com.example.school_administration_app.Entities;
-
+package com.eslam.school_administration_app.Entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
@@ -10,12 +9,18 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.util.Collection;
+import java.util.List;
 import java.util.Set;
 import com.fasterxml.jackson.annotation.*;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
 @Entity
 @Table(name = "students")
 @NoArgsConstructor @Getter @Setter @ToString
-public class Student {
+public class Student  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -38,7 +43,9 @@ public class Student {
 
     @JsonBackReference
     Set<Course> courses;
-
+    @OneToOne(cascade = CascadeType.REMOVE)
+    @JoinColumn(name = "user_id")
+    User user;
     public Student(String name, String email ){
         this.name=name;
         this.email = email;

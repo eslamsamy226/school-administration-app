@@ -1,9 +1,8 @@
-package com.example.school_administration_app.Controllers;
+package com.eslam.school_administration_app.Controller;
 
-
-import com.example.school_administration_app.Entities.Course;
-import com.example.school_administration_app.Entities.Student;
-import com.example.school_administration_app.Services.CourseService;
+import com.eslam.school_administration_app.Entity.Course;
+import com.eslam.school_administration_app.Entity.Student;
+import com.eslam.school_administration_app.services.CourseService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

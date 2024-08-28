@@ -1,5 +1,4 @@
-package com.example.school_administration_app.Entities;
-
+package com.eslam.school_administration_app.Entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.*;
